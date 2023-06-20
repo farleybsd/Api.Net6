@@ -1,0 +1,11 @@
+# Criando Api
+dotnet new web -o MinhaApi
+# Subindo Api
+dotnet  run 
+# Subindo Api  e ouvindo Alteracoes do Codigo
+dotnet watch run 
+# Status Code 
+- 20x Ok
+- 30x conteudo nao existe mais
+- 40x erro do cliente bad request
+- 50x erro do servidor
