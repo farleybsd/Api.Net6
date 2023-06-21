@@ -1,0 +1,10 @@
+# Instalando SqlLite
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+# Gerando Migrates
+- Obs : Tem que ter instalando o  dotnet-ef tool
+dotnet tool install --global dotnet-ef 
+
+dotnet ef migrations add CreateDataBase 
+dotnet ef database update
