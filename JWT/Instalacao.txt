@@ -1,0 +1,18 @@
+﻿# Instalacao EF CORE
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+# Sql Server Docker
+docker run --name sqlserver -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=1q2w3e4r@#$" -p 1433:1433 -d mcr.microsoft.com/mssql/server
+dotnet dev-certs https --clean
+dotnet dev-certs https --trust
+Server=localhost,1433;Database=balta;User ID=sa;Password=1q2w3e4r@#$;Trusted_Connection=False; TrustServerCertificate=True;
+# Primeira Migrate
+dotnet ef migrations add CreateDataBase
+
+# Aplicando Migrate
+dotnet ef database update
+
+# Jwt
+dotnet add package Microsoft.AspNetCore.Authentication
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
