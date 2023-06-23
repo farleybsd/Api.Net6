@@ -1,6 +1,8 @@
-﻿using Blog.Models;
+﻿using Blog.Extensions;
+using Blog.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 
 namespace Blog.Services
@@ -11,8 +13,17 @@ namespace Blog.Services
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var Key = Encoding.ASCII.GetBytes(Configuration.JwtKey);
+            var claims = user.GetClaims();
             var tokenDescriptor = new SecurityTokenDescriptor
             {
+                Subject = new ClaimsIdentity(claims),
+                //Subject = new ClaimsIdentity(new Claim[]
+                //{
+                //    new Claim(ClaimTypes.Name,"andrebaltieri"), // User.Identity.Name
+                //    new Claim(ClaimTypes.Role,"user"),
+                //    new Claim(ClaimTypes.Role,"admin"), // User.IsInRole
+                //    new Claim("Fruta","Banana")
+                //}),
                 Expires = DateTime.UtcNow.AddHours(8),
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(Key),

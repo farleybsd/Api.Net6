@@ -16,3 +16,6 @@ dotnet ef database update
 # Jwt
 dotnet add package Microsoft.AspNetCore.Authentication
 dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+
+# Criptografando Senhas
+dotnet add package SecureIdentity

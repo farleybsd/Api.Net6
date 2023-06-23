@@ -139,3 +139,4 @@ C:\ProjetosPessoais\ApiNet6\JWT\obj\Debug\net7.0\refint\Blog.dll
 C:\ProjetosPessoais\ApiNet6\JWT\obj\Debug\net7.0\Blog.pdb
 C:\ProjetosPessoais\ApiNet6\JWT\obj\Debug\net7.0\Blog.genruntimeconfig.cache
 C:\ProjetosPessoais\ApiNet6\JWT\obj\Debug\net7.0\ref\Blog.dll
+C:\ProjetosPessoais\ApiNet6\JWT\bin\Debug\net7.0\SecureIdentity.dll
