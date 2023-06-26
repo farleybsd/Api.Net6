@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "EnXNsdz8rNlqqo3caB9DJbc7ETuMXZk009+u64DVgHk=",
+  "Source": "Blog",
+  "BasePath": "_content/Blog",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Blog\\wwwroot",
+      "Source": "Blog",
+      "ContentRoot": "C:\\ProjetosPessoais\\ApiNet6\\Perfomace\\Perfomace\\wwwroot\\",
+      "BasePath": "_content/Blog",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
