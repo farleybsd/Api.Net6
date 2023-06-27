@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+ webapp:
+    image: mcr.microsoft.com/dotnet/samples:aspnetapp
+    ports:
+      - 80
+      - 443
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    volumes:
+      - ~/.aspnet/https:/https:ro
+ blogApi:
+    build: 
+      dockerfile: ./Docker/blog.dockerfile
+      context: .
+    image: farleybsd/blogapi:v1
+    container_name: api-blog-host
+    ports:
+      - 5000:80
+    networks:
+      - redeapiblog
+ SqlSeverBlog:
+    image: mcr.microsoft.com/mssql/server
+    container_name: sql-server-host
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: 1q2w3e4r@#$
+      MSSQL_AGENT_ENABLED: True
+  
+      
+networks:
+  redeapiblog:
+    driver: bridge
+volumes:
+  SqlBlog:

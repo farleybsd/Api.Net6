@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "V0LLfsnpMG/9k5rwbtqvcyjifO/SFzJUdZ7FNfCaq+A=",
+  "Source": "Blog",
+  "BasePath": "_content/Blog",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Blog\\wwwroot",
+      "Source": "Blog",
+      "ContentRoot": "C:\\ProjetosPessoais\\ApiNet6\\Docker\\wwwroot\\",
+      "BasePath": "_content/Blog",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
