@@ -15,6 +15,7 @@ ConfigureMvc(builder);
 ConfigureServices(builder);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 //builder.Services.AddTransient(); -> Sempre Cria um novo
 //builder.Services.AddScoped();    -> Mantem o mesmo objeto naquela transacao (Request)
 //builder.Services.AddSingleton(); -> Nunca Morre
@@ -29,7 +30,7 @@ app.UseStaticFiles();
 app.MapControllers();
 app.UseSwagger();
 app.UseSwaggerUI();
-
+ApplyMigrations(app);
 app.Run();
 
 static void LoadConfigutarion(WebApplication app)
@@ -102,4 +103,19 @@ static void ConfigureServices(WebApplicationBuilder builder)
     });
     builder.Services.AddTransient<TokenService>();
     builder.Services.AddTransient<EmailService>();
+}
+
+static void ApplyMigrations(WebApplication app)
+{
+
+    using (var scope = app.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+
+        var context = services.GetRequiredService<BlogDataContext>();
+        if (context.Database.GetPendingMigrations().Any())
+        {
+            context.Database.Migrate();
+        }
+    }
 }

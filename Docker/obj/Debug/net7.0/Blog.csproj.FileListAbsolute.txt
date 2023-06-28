@@ -293,11 +293,6 @@ C:\ProjetosPessoais\ApiNet6\Final\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagge
 C:\ProjetosPessoais\ApiNet6\Final\obj\Debug\net7.0\Blog.MvcApplicationPartsAssemblyInfo.cs
 C:\ProjetosPessoais\ApiNet6\Docker\bin\Debug\net7.0\appsettings.Development.json
 C:\ProjetosPessoais\ApiNet6\Docker\bin\Debug\net7.0\appsettings.json
-C:\ProjetosPessoais\ApiNet6\Docker\bin\Debug\net7.0\out\web.config
-C:\ProjetosPessoais\ApiNet6\Docker\bin\Debug\net7.0\out\appsettings.Development.json
-C:\ProjetosPessoais\ApiNet6\Docker\bin\Debug\net7.0\out\appsettings.json
-C:\ProjetosPessoais\ApiNet6\Docker\bin\Debug\net7.0\out\Blog.deps.json
-C:\ProjetosPessoais\ApiNet6\Docker\bin\Debug\net7.0\out\Blog.runtimeconfig.json
 C:\ProjetosPessoais\ApiNet6\Docker\bin\Debug\net7.0\Blog.staticwebassets.runtime.json
 C:\ProjetosPessoais\ApiNet6\Docker\bin\Debug\net7.0\Blog.exe
 C:\ProjetosPessoais\ApiNet6\Docker\bin\Debug\net7.0\Blog.deps.json
