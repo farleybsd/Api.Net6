@@ -33,6 +33,9 @@ services:
       MSSQL_AGENT_ENABLED: True
     networks:
       - redeapiblog
+    volumes:
+      - c:\dados\volumes\sqlsever:/var/opt/mssql/data
+      - ./_SQL_Init_Script:/docker-entrypoint-initdb.d
   
       
 networks:
